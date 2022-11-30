@@ -1,0 +1,101 @@
+body{
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(30, 38%, 92%);
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    
+    margin: 1rem;
+}
+.mobile-img,
+.desktop-img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+.mobile-img {
+    border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+}
+.desktop-img {
+    display: none;
+    border-bottom-left-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+}
+@media only screen and (min-width: 600px) {
+    .mobile-img{
+      display: none;
+    }
+ 
+    .desktop-img{
+      display: block;
+    }
+}
+.product {
+    display: grid;
+    overflow: hidden;
+    background-color: hsl(0, 0, 100%);
+    max-width: 600px;
+    padding: 1.5rem;
+}
+@media (min-width: 600px) {
+    .product {
+        padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+.product-info {
+    display: grid;
+    background-color: white;
+    padding: 1.5rem;
+}
+p {
+    font-size: 0.8125rem;
+    color: hsl(228, 12%, 48%);
+    line-height: 22px;
+    word-spacing: 2px;
+}
+.price-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.product-name {
+    font-family: 'Fraunces', serif;
+    width: 700;
+}
+button {
+    cursor: pointer;
+    font-size: 0.925rem;
+    font-weight: 700;
+    gap: 0.7rem;
+    display: inline-flex;
+    color: white;
+    background-color: hsl(158, 36%, 37%);
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 8px;
+    margin-top: 16px;
+    justify-content: center;
+    align-items: center;
+}
+button:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+.product-category {
+    letter-spacing: 5px;
+}
+.price {
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+}
+.original-price {
+    text-decoration: line-through;
+    padding-left: 16px;
+}
